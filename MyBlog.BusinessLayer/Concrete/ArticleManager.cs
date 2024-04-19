@@ -23,6 +23,11 @@ namespace MyBlog.BusinessLayer.Concrete
             _articleDal.Delete(id);
         }
 
+        public List<Article> TGetArticleByWriter(int id)
+        {
+            return _articleDal.GetArticleByWriter(id);
+        }
+
         public Article TGetById(int id)
         {
             return _articleDal.GetById(id);

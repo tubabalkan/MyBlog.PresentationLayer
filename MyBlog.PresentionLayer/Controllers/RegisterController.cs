@@ -18,7 +18,6 @@ namespace MyBlog.PresentationLayer.Controllers
         {
             return View();
         }
-
         [HttpPost]
         public async Task<IActionResult> Index(RegisterViewModel model)
         {
