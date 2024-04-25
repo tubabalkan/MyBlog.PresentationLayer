@@ -30,9 +30,19 @@ namespace MyBlog.BusinessLayer.Concrete
             return _articleDal.GetArticleByWriter(id);
         }
 
+        public List<Article> TGetArticlesWithCategory()
+        {
+            return _articleDal.GetArticlesWithCategory();
+        }
+
         public List<Article> TGetArticlesWithCategoryByWriter(int id)
         {
             return _articleDal.GetArticlesWithCategoryByWriter(id) ;
+        }
+
+        public Article TGetArticleWithCategoryArticleId(int id)
+        {
+            return _articleDal.GetArticleWithCategoryArticleId(id) ;
         }
 
         public Article TGetById(int id)
