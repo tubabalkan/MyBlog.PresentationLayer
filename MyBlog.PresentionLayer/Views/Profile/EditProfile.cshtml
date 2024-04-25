@@ -1,0 +1,60 @@
+﻿@model MyBlog.PresentationLayer.Areas.Writer.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "EditProfile";
+    Layout = "~/Areas/Writer/Views/WriterLayout/Index.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">Profil Sayfası</h3>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Bloglar Listem</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Yeni Blog </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yeni Blog Ekleme Sayfası</h4>
+                        <p class="card-description">Aşağıdaki alanları eksiksiz bir şekilde doldurunuz</p>
+                        <form class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label>Adınız</label>
+                                <input type="text" class="form-control" asp-for="Name" />
+                            </div>
+                            <div class="form-group">
+                                <label>Soyadınız</label>
+                                <input type="text" class="form-control" asp-for="Surname" />
+                            </div>
+                            <div class="form-group">
+                                <label>Kullanıcı Adınız</label>
+                                <input type="text" class="form-control" asp-for="UserName" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email Adresiniz</label>
+                                <textarea type="text" class="form-control" rows="10" asp-for="Email"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Kullanıcı Adınız</label>
+                                <input type="text" class="form-control" asp-for="UserName" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email Adresiniz</label>
+                                <textarea type="text" class="form-control" rows="10" asp-for="Email"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mr-2"> Bloğu Oluştur </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

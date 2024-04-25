@@ -18,6 +18,8 @@ namespace MyBlog.BusinessLayer.Concrete
             _articleDal = articleDal;
         }
 
+    
+
         public void TDelete(int id)
         {
             _articleDal.Delete(id);
@@ -26,6 +28,11 @@ namespace MyBlog.BusinessLayer.Concrete
         public List<Article> TGetArticleByWriter(int id)
         {
             return _articleDal.GetArticleByWriter(id);
+        }
+
+        public List<Article> TGetArticlesWithCategoryByWriter(int id)
+        {
+            return _articleDal.GetArticlesWithCategoryByWriter(id) ;
         }
 
         public Article TGetById(int id)
