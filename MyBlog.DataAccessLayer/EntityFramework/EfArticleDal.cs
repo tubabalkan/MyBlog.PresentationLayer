@@ -36,7 +36,7 @@ namespace MyBlog.DataAccessLayer.EntityFramework
         public Article GetArticleWithCategoryArticleId(int id)
         {
             var values = context.Articles.Where(x => x.ArticleId == id).Include(y => y.Category).FirstOrDefault();
-            return values();
+            return values;
         }
     }
 }
