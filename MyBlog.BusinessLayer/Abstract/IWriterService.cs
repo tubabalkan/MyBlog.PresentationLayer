@@ -9,5 +9,6 @@ namespace MyBlog.BusinessLayer.Abstract
 {
     public interface IWriterService:IGenericService<Writer>
     {
+       
     }
 }

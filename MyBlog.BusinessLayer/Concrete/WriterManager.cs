@@ -33,6 +33,8 @@ namespace MyBlog.BusinessLayer.Concrete
             return _writerDal.GetListAll();
         }
 
+       
+
         public void TInsert(Writer entity)
         {
            _writerDal.Insert(entity);

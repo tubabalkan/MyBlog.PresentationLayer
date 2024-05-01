@@ -16,6 +16,7 @@ namespace MyBlog.PresentationLayer.Areas.Writer.Controllers
             _userManager = userManager;
         }
 
+
         [HttpGet]
         [Route("EditProfile")]
         public async Task<IActionResult> EditProfile()
