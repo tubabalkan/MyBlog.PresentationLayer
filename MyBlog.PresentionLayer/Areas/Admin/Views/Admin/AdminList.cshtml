@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "AdminList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Profil Bilgileri</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Default/Index/">Ana Sayfa</a></li>
+            <li class="breadcrumb-item">Profilim</li>
+            <li class="breadcrumb-item active" aria-current="page">Şifre Değiştir</li>
+        </ol>
+    </div>
+   
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+                <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle" style="max-width: 200px; max-height: 200px;" src="gorsel" alt="User profile picture">
+                </div>
+                <h3 class="profile-username text-center">Tuba BALKAN</h3>
+                <p class="text-muted text-center">Bilgisayar Mühendisi</p>
+                <ul class="list-group list-group-unbordered mb-3">
+                    <li class="list-group-item">
+                        <b>Kullanıı Adı</b> <a class="float-right">username</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Şifre</b> <input type="password" class="float-right" value="password" disabled>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Mail Adresi</b> <a class="float-right">mail</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+   
+
+</div>
