@@ -1,0 +1,76 @@
+﻿@using MyBlog.EntityLayer.Concrete
+@model List<Comment>
+@{
+    ViewData["Title"] = "YorumList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+@{
+    string status = "";
+    string statusColor = "";
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Yorum Listesi Tablosu</h3>
+
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Yorum</th>
+                            <th>Tarih</th>
+                            <th>Status</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            switch (item.Status)
+                            {
+                                case true:
+                                    statusColor = "badge badge-success";
+                                    status = "Aktif";
+                                    break;
+                                case false:
+                                    statusColor = "badge badge-danger";
+                                    status = "Pasif";
+                                    break;
+                            }
+                            <tr>
+                                <td>@item.CommentId</td>
+                                <td>@item.Description</td>
+                                <td>@(((DateTime)item.CreateDate).ToString("dd-MMM-yyy"))</td>
+                                <td>
+                                    <span class="@statusColor">@status</span>
+                                </td>
+                                <td><a href="/Admin/Yorum/DeleteYorum/@item.CommentId" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/Admin/Yorum/YorumUpdate/@item.CommentId" class="btn btn-success">Güncelle</a></td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+
+

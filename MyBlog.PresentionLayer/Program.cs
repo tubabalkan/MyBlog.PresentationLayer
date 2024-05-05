@@ -25,6 +25,10 @@ builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddScoped<IWriterService, WriterManager>();
 builder.Services.AddScoped<IWriterDal, EfWriterDal>();
 
+
+builder.Services.AddScoped<ICommentService, CommentManager>();
+builder.Services.AddScoped<ICommentDal, EfCommentDal>();
+
 builder.Services.AddDbContext<BlogContext>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<BlogContext>().AddErrorDescriber<CustomIdenditityValidator>();
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyBlog.BusinessLayer.Concrete
 {
-    internal class CommentManager : ICommentService
+    public class CommentManager : ICommentService
     {
         private readonly ICommentDal _commentDal;
 
