@@ -1,4 +1,4 @@
-﻿namespace MyBlog.PresentationLayer.Areas.Writer.Models
+﻿namespace MyBlog.PresentationLayer.Areas.Writers.Models
 {
     public class UserEditViewModel
     {

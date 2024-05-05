@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyBlog.EntityLayer.Concrete;
-using MyBlog.PresentationLayer.Areas.Writer.Models;
+using MyBlog.PresentationLayer.Areas.Writers.Models;
 
-namespace MyBlog.PresentationLayer.Areas.Writer.Controllers
+namespace MyBlog.PresentationLayer.Areas.Writers.Controllers
 {
-    [Area("Writer")]
-    [Route("Writer/Profile")]
+    [Area("Writers")]
+    [Route("Writers/Profile")]
     public class ProfileController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

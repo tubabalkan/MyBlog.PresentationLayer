@@ -1,8 +1,9 @@
-﻿@model MyBlog.EntityLayer.Concrete.Article
+﻿@model MyBlog.EntityLayer.Concrete.Writer
 @{
-    ViewData["Title"] = "UpdateBlog";
-    Layout = "~/Areas/Writer/Views/WriterLayout/Index.cshtml";
+    ViewData["Title"] = "UpdateYazar";
+    Layout = "~/Areas/Writers/Views/WriterLayout/Index.cshtml";
 }
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="page-header">
@@ -22,27 +23,26 @@
                         <p class="card-description">Aşağıdaki alanları eksiksiz olarak doldurunuz.</p>
                         <form class="forms-sample" method="post">
                             <div class="form-group">
-                                <input type="hidden" asp-for="ArticleId" />
-                                <input type="hidden" asp-for="AppUserId" />
-                                <input type="hidden" asp-for="CreatedDate" />
-                                <label>Blog Başlığı</label>
+                                <input type="hidden" asp-for="WriterId" />
+                                
+                                <label>Yazar Adı</label>
+                                <input type="text" class="form-control" asp-for="Name" />
+                            </div>
+                            <div class="form-group">
+                                <label>Yazar Soyadı</label>
+                                <input type="text" class="form-control" asp-for="Surname" />
+                            </div>
+                            <div class="form-group">
+                                <label>Başlık</label>
                                 <input type="text" class="form-control" asp-for="Title" />
                             </div>
                             <div class="form-group">
-                                <label>Blog Kapak Url</label>
-                                <input type="text" class="form-control" asp-for="CoverImageUrl" />
+                                <label>Açıklama</label>
+                                <input type="text" class="form-control" asp-for="Description" />
                             </div>
                             <div class="form-group">
-                                <label>Küçük Kapak Url</label>
-                                <input type="text" class="form-control" asp-for="ThumbImageUrl" />
-                            </div>
-                            <div class="form-group">
-                                <label>Kategori</label>
-                                @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
-                            </div>
-                            <div class="form-group">
-                                <label>Blog İçeriği</label>
-                                <textarea class="form-control" rows="10" asp-for="Detail"></textarea>
+                                <label>Görsel</label>
+                                <input type="text" class="form-control" asp-for="ImageUrl" />
                             </div>
 
                             <button type="submit" class="btn btn-success mr-2"> Blogu Güncelle </button>
@@ -55,3 +55,4 @@
     </div>
 
 </div>
+

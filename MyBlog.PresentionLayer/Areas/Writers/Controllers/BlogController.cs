@@ -5,9 +5,9 @@ using MyBlog.BusinessLayer.Abstract;
 using MyBlog.EntityLayer.Concrete;
 using System.Security.Permissions;
 
-namespace MyBlog.PresentationLayer.Areas.Writer.Controllers
+namespace MyBlog.PresentationLayer.Areas.Writers.Controllers
 {
-    [Area("Writer")]
+    [Area("Writers")]
     public class BlogController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

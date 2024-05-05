@@ -1,0 +1,60 @@
+﻿@model MyBlog.EntityLayer.Concrete.Writer
+@{
+    ViewData["Title"] = "CreateYazar";
+    Layout = "~/Areas/Writers/Views/WriterLayout/Index.cshtml";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">Yazar Ekleme Sayfası</h3>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Yazar Listem</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Yeni Yazar </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yazar Ekleme Paneli</h4>
+                        <p class="card-description">Aşağıdaki alanları eksiksiz olarak doldurunuz.</p>
+                        <form class="forms-sample" method="post">
+                            <div class="form-group">
+                                <input type="hidden" asp-for="WriterId" />
+
+                                <label>Yazar Adı</label>
+                                <input type="text" class="form-control" asp-for="Name" />
+                            </div>
+                            <div class="form-group">
+                                <label>Yazar Soyadı</label>
+                                <input type="text" class="form-control" asp-for="Surname" />
+                            </div>
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                <input type="text" class="form-control" asp-for="Title" />
+                            </div>
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <input type="text" class="form-control" asp-for="Description" />
+                            </div>
+                            <div class="form-group">
+                                <label>Görsel</label>
+                                <input type="text" class="form-control" asp-for="ImageUrl" />
+                            </div>
+
+                            <button type="submit" class="btn btn-success mr-2"> Yazarı Ekle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
