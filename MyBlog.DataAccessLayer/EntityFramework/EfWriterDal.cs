@@ -14,7 +14,6 @@ namespace MyBlog.DataAccessLayer.EntityFramework
     {
         BlogContext context = new BlogContext();
 
-      
         public int GetWriterCount()
         {
             //Yazar sayısını getiren sorgu

@@ -13,16 +13,21 @@ namespace MyBlog.PresentationLayer.Areas.Writer.Controllers
     
     public class YazarController : Controller
     {
-        WriterManager writerManager = new WriterManager(new EfWriterDal());
+        private readonly IWriterService _writerService;
+
+        public YazarController(IWriterService writerService)
+        {
+            _writerService = writerService;
+        }
 
         public IActionResult YazarList()
         {
-            var values = writerManager.TGetListAll();
+            var values = _writerService.TGetListAll();
             return View(values);
         }
         public IActionResult DeleteYazar(int id)
         {
-            writerManager.TDelete(id);
+            _writerService.TDelete(id);
             return RedirectToAction("YazarList");
         }
       
