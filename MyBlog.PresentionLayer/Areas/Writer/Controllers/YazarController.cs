@@ -27,7 +27,7 @@ namespace MyBlog.PresentationLayer.Areas.Writer.Controllers
         }
         public IActionResult DeleteYazar(int id)
         {
-            _writerService.TDelete(id);
+            _writerService.TDelete(id); 
             return RedirectToAction("YazarList");
         }
       
