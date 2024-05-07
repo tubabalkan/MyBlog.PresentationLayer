@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyBlog.BusinessLayer.Concrete
 {
-    internal class TagManager : ITagService
+    public class TagManager : ITagService
     {
         private readonly ITagDal _tagDal;
 
