@@ -19,6 +19,8 @@ namespace MyBlog.BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
+     
+
         public void TDelete(int id)
         {
             _categoryDal.Delete(id);

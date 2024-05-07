@@ -13,5 +13,6 @@ namespace MyBlog.BusinessLayer.Abstract
         void TUpdate(T entity);
         List<T> TGetListAll();
         T TGetById(int id);
+
     }
 }
