@@ -1,0 +1,59 @@
+﻿@model MyBlog.EntityLayer.Concrete.Article
+@{
+    ViewData["Title"] = "BlogGuncelle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Güncelleme Sayfası</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="inputName">Blog Başlığı</label>
+                        <input type="text" id="inputName" class="form-control" asp-for="Title" >
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Blog Görseli</label>
+                        <input type="text" id="inputName" class="form-control" asp-for="ThumbImageUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDescription">Blog Açıklaması</label>
+                        <textarea id="inputDescription" class="form-control" rows="4" asp-for="Detail"></textarea>
+                    </div>
+                     <div class="form-group">
+                        <label for="inputName">Blog Tarihi</label>
+                        <input type="text" id="inputName" class="form-control" asp-for="CreatedDate" value="@Model.CreatedDate.ToString("dd/MM/yyyy")">
+                    </div> 
+                   @*  <div class="form-group">
+                        <label for="inputClientCompany">Yorum Durumu</label>
+                        @Html.DropDownListFor(x=>x.CommentId,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
+                    </div>
+                    <div class="form-group">
+                        <label for="inputClientCompany">Yorum Durumu</label>
+                        @Html.DropDownListFor(x=>x.CommentId,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
+                    </div> *@
+
+                    
+                </div>
+                <!-- /.card-body -->
+                <button class="btn btn-info">Güncelle</button>
+            </div>
+
+            <!-- /.card -->
+        </div>
+
+    </div>
+
+</section>
+

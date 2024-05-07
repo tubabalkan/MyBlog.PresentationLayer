@@ -1,0 +1,32 @@
+﻿@model MyBlog.EntityLayer.Concrete.Article
+@{
+    ViewData["Title"] = "BlogDetail";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<h3>Blog Detay Sayfası</h3>
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card card-solid">
+        <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                    <h3 class="d-inline-block d-sm-none"> @Html.DisplayFor(x=>x.Title)</h3>
+                        <div class="col-12">
+                        <img src=" @Html.DisplayFor(x => x.ThumbImageUrl)" class="product-image" alt="Product Image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                    <h3 class="my-3">@Html.DisplayFor(x=>x.Title)</h3>
+                    <p> @Html.DisplayFor(x => x.Detail)</p>
+
+                        <hr>
+
+                    </div>
+                </div>
+                  </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+</section>

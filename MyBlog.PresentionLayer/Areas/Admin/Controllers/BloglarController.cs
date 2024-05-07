@@ -25,5 +25,40 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
             var values=_articleService.TGetListAll();
             return View(values);
         }
+        public IActionResult BlogDetail(int id)
+        {
+            var values=_articleService.TGetById(id);
+            return View(values);
+        }
+        public IActionResult BlogSil(int id)
+        {
+            _articleService.TDelete(id);
+            return RedirectToAction("BlogList");
+        }
+        [HttpGet]
+        public IActionResult BlogGuncelle(int id)
+        {
+            var values2 = _articleService.TGetById(id);
+            return View(values2);
+        }
+        [HttpPost]
+        public IActionResult BlogGuncelle(Article article)
+        {
+            _articleService.TUpdate(article);
+            return RedirectToAction("BlogList");
+        }
+        [HttpGet]
+        public IActionResult YeniBlog()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult YeniBlog(Article article)
+        {
+            article.CreatedDate = DateTime.Now;
+            _articleService.TInsert(article);
+            return RedirectToAction("BlogList");
+        }
+
     }
 }
