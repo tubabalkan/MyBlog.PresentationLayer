@@ -1,4 +1,5 @@
-﻿
+﻿@using MyBlog.EntityLayer.Concrete
+@model List<AppUser>
 @{
     ViewData["Title"] = "AdminList";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
@@ -16,24 +17,28 @@
    
         <div class="card card-primary card-outline">
             <div class="card-body box-profile">
-                <div class="text-center">
-                    <img class="profile-user-img img-fluid img-circle" style="max-width: 200px; max-height: 200px;" src="gorsel" alt="User profile picture">
+            @foreach(var item in Model)
+            {
+                 <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle" style="max-width: 200px; max-height: 200px;" src="@item.ImageUrl" alt="User profile picture">
                 </div>
-                <h3 class="profile-username text-center">Tuba BALKAN</h3>
-                <p class="text-muted text-center">Bilgisayar Mühendisi</p>
+                <h3 class="profile-username text-center">@item.Name @item.Surname</h3>
+                <p class="text-muted text-center">@item.City</p>
                 <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item">
-                        <b>Kullanıı Adı</b> <a class="float-right">username</a>
+                        <b>Kullanıı Adı</b> <a class="float-right">@item.UserName</a>
                     </li>
                     <li class="list-group-item">
                         <b>Şifre</b> <input type="password" class="float-right" value="password" disabled>
                     </li>
                     <li class="list-group-item">
-                        <b>Mail Adresi</b> <a class="float-right">mail</a>
+                        <b>Mail Adresi</b> <a class="float-right">@item.Email</a>
                     </li>
                 </ul>
-
-            </div>
+          
+                
+            }
+        </div>
             <!-- /.card-body -->
         </div>
    

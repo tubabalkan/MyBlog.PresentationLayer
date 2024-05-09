@@ -17,8 +17,10 @@
                         </button>
                     </div>
                 </div>
+                 <form class="forms-sample" method="post">
                 <div class="card-body">
                     <div class="form-group">
+                        <input type="hidden" asp-for="WriterId" />
                         <label for="inputName">Yazar Adı</label>
                         <input type="text" id="inputName" class="form-control" asp-for="Name">
                     </div>
@@ -41,6 +43,7 @@
                 </div>
                 <!-- /.card-body -->
                 <button class="btn btn-info">Kaydet</button>
+                </form>
             </div>
 
             <!-- /.card -->

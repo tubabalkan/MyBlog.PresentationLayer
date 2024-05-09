@@ -17,6 +17,7 @@
                         </button>
                     </div>
                 </div>
+                <form class="forms-sample" method="post">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="inputName">Blog Başlığı</label>
@@ -26,27 +27,22 @@
                         <label for="inputName">Blog Görseli</label>
                         <input type="text" id="inputName" class="form-control" asp-for="ThumbImageUrl">
                     </div>
+                        <div class="form-group">
+                            <label>Küçük Kapak Url</label>
+                            <input type="text" class="form-control" asp-for="CoverImageUrl" />
+                        </div>
                     <div class="form-group">
                         <label for="inputDescription">Blog Açıklaması</label>
                         <textarea id="inputDescription" class="form-control" rows="4" asp-for="Detail"></textarea>
                     </div>
-                    @* <div class="form-group">
-                        <label for="inputName">Blog Tarihi</label>
-                        <input type="text" id="inputName" class="form-control" asp-for="CreatedDate" value="@Model.CreatedDate.ToString("dd/MM/yyyy")">
-                    </div> *@
-                    @*  <div class="form-group">
-                    <label for="inputClientCompany">Yorum Durumu</label>
-                    @Html.DropDownListFor(x=>x.CommentId,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
-                    </div>
                     <div class="form-group">
-                    <label for="inputClientCompany">Yorum Durumu</label>
-                    @Html.DropDownListFor(x=>x.CommentId,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
-                    </div> *@
-
-
+                        <label>Kategori</label>
+                        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.v,new{@class="form-control"})
+                    </div>
                 </div>
                 <!-- /.card-body -->
                 <button class="btn btn-info">Kaydet</button>
+                </form>
             </div>
 
             <!-- /.card -->
