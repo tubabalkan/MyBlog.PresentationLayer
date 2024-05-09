@@ -1,0 +1,21 @@
+﻿@model List<Article>
+<div class="card-body">
+    <div class="card-title font-weight-medium"> Bloglar </div>
+    <p class="text-muted"> Sayfamızda yer alan bloglar tabloda gösterilmektedir </p>
+    @foreach (var item in Model)
+        {
+    <div class="d-flex flex-wrap border-bottom py-2 border-top justify-content-between">
+        
+            <img class="survey-img mb-lg-3" src="@item.ThumbImageUrl" alt="" />
+            <div class="pt-2">
+                <h5 class="mb-0">@item.Title</h5>
+                <p class="mb-0 text-muted">@item.Detail.Substring(0, 30)....</p>
+                <h5 class="mb-0">@(((DateTime)item.CreatedDate).ToString("dd-MMM-yyyy"))</h5>
+            </div>
+        
+        
+        </div>
+    }
+    
+    <a class="text-black mt-3 d-block font-weight-medium h6" href="/Writers/Blog/MyBlogList/">Blog Sayfasını Görüntüle <i class="mdi mdi-chevron-right"></i></a>
+</div>

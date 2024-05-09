@@ -1,0 +1,46 @@
+﻿@model List<Message>
+<div class="card">
+    <div class="card-body px-0 overflow-auto">
+        <h4 class="card-title pl-4">Gelen Mesajlar</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="bg-light">
+                    <tr>
+                        <th>İsim</th>
+                        <th>Konu</th>
+                        <th>Mesaj</th>
+                        <th>Gönderim Tarihi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                        {
+                    <tr>
+                        
+                            <td>
+                                <div class="d-flex align-items-center">
+
+                                    <div class="table-user-name ml-3">
+                                        <p class="mb-0 font-weight-medium"> @item.Gonderen </p>
+                                        <small>  </small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>@item.Subject </td>
+                            <td>
+                                <div > @item.MessageDescription</div>
+                            </td>
+                            <td>@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                       
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <a class="text-black mt-3 d-block pl-4" href="#">
+            <span class="font-weight-medium h6">Mesaj Detaylarını Gör</span>
+            <i class="mdi mdi-chevron-right"></i>
+        </a>
+    </div>
+</div>
+<!--MessageDescription.Substring(0, 30)....-->
