@@ -1,0 +1,69 @@
+﻿@model List<MyBlog.EntityLayer.Concrete.Comment>
+@{
+    ViewData["Title"] = "YorumList";
+    Layout = "~/Areas/Writers/Views/WriterLayout/Index.cshtml";
+}
+@{
+    
+    string status = "";
+    string statusColor = "";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">Yorum Tablosu</h3>
+
+        </div>
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yorumlar</h4>
+                    <br />
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Yorum Id</th>
+                                    <th>Yorum Açıklaması</th>
+                                    <th>Tarihi</th>
+                                    <th>Statusu</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    switch (item.Status)
+                                    {
+                                        case true:
+                                            statusColor = "badge badge-success";
+                                            status = "Aktif";
+                                            break;
+                                        case false:
+                                            statusColor = "badge badge-danger";
+                                            status = "Pasif";
+                                            break;
+                                    }
+                                    <tr>
+                                        <td>@item.CommentId</td>
+                                        <td>@item.Description</td>
+                                        <td>@(((DateTime)item.CreateDate).ToString("dd-MMM-yyy"))</td>
+                                        <td>
+                                            <label class="@statusColor">@status</label>
+                                        </td>
+                                        <td><a href="/Writers/Yorum/YorumSil/@item.CommentId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Writers/Yorum/YorumGuncelle/@item.CommentId" class="btn btn-success">Güncelle</a></td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

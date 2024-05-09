@@ -1,0 +1,36 @@
+﻿@model MyBlog.EntityLayer.Concrete.Tag
+@{
+    ViewData["Title"] = "EtiketGuncelle";
+    Layout = "~/Areas/Writers/Views/WriterLayout/Index.cshtml";
+}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">Etiket Güncelleme Sayfası</h3>
+            <nav aria-label="breadcrumb">
+               
+            </nav>
+        </div>
+<div class="row">
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+                        <h4 class="card-title">Etiket Güncelle</h4>
+            <br />
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <input type="hidden" asp-for="TagId" />
+                     <label>Etiket Adı</label>
+                     <input type="text" class="form-control" asp-for="TagTitle" />
+                </div>
+                
+                <button type="submit" class="btn btn-primary mr-2"> Güncelle </button>
+               
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+

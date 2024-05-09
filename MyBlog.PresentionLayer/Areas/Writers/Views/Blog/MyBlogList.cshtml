@@ -29,6 +29,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Başlık</th>
+                                        <th>Görsel</th>
                                         <th>Kategori</th>
                                         <th>Tarih</th>
                                         <th>Sil</th>
@@ -41,6 +42,13 @@
                                         <tr>
                                             <td>@item.ArticleId</td>
                                             <td>@item.Title</td>
+                                            <td>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <img alt="Avatar" class="table-avatar" src="@item.ThumbImageUrl">
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <td>@item.Category.CategoryName</td>
                                             <td>@item.CreatedDate</td>
                                             <td><a href="/Writers/Blog/DeleteBlog/@item.ArticleId" class="btn btn-danger">Sil</a></td>
