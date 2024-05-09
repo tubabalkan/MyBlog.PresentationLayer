@@ -32,10 +32,7 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
 
             return View();
         }
-        //public PartialViewResult yazarr()
-        //{
-        //    return PartialView();
-        //}
-       
+
+
     }
 }
