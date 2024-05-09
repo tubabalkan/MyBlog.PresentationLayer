@@ -14,7 +14,7 @@ namespace MyBlog.PresentationLayer.ViewComponents.DashboardComponents
 
         public IViewComponentResult Invoke()
         {
-            var values = _articleService.TGetListAll();
+            var values = _articleService.TGetListAll().Take(5).ToList();
             return View(values);
         }
     }
