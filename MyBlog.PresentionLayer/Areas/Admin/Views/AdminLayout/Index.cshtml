@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -250,19 +251,19 @@ to get the desired effect
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <a href="/Admin/Contact/Index/" class="nav-link">
                                         <i class="fas fa-envelope-open"></i>
                                         <p>Gelen Mesajlar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                    <a href="/Admin/Message/Sendbox/" class="nav-link">
                                         <i class="nav-icon fas fa-paper-plane"></i>
                                         <p>Giden Mesajlar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                    <a href="/Admin/Message/NewMessage/" class="nav-link">
                                         <i class="nav-icon fas fa-edit"></i>
                                         <p>Yeni Mesaj Oluştur</p>
                                     </a>
@@ -322,5 +323,13 @@ to get the desired effect
     <script src="~/AdminLTE-3.0.4/plugins/chart.js/Chart.min.js"></script>
     <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
     <script src="~/AdminLTE-3.0.4/dist/js/pages/dashboard3.js"></script>
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(function () {
+            //Add text editor
+            $('#compose-textarea').summernote().noConflict;
+        })
+    </script>
 </body>
 </html>

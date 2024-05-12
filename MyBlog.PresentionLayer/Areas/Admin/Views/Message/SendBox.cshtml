@@ -1,9 +1,10 @@
 ﻿@using MyBlog.EntityLayer.Concrete
-@model List<Contact>
+@model List<Message>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SendBox";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
+
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +30,7 @@
     <section class="content">
         <div class="row">
             <div class="col-md-3">
-                <a href="/Admin/Message/NewMessage/" class="btn btn-primary btn-block mb-3">Yeni Mesaj Oluştur</a>
+                <a href="/Message/NewMessage/" class="btn btn-primary btn-block mb-3">Yeni Mesaj Oluştur</a>
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Seçenekler</h3>
@@ -48,7 +49,7 @@
                                 </a>
                             </li>
                             <li class="nav-item active">
-                                <a href="/Admin/Message/Inbox/" class="nav-link">
+                                <a href="/Admin//Message/Inbox/" class="nav-link">
                                     <i class="fas fa-inbox"></i> Gelen Mesajlar
                                     <span class="badge bg-primary float-right">@ViewBag.message</span>
                                 </a>
@@ -118,7 +119,7 @@
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Gelen Mesajlar</h3>
+                        <h3 class="card-title">Gönderilen Mesajlar</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Mail Kutusunda Ara">
@@ -158,7 +159,7 @@
                         <div class="table-responsive mailbox-messages">
                             <table class="table table-hover table-striped">
                                 <tbody>
-                                    @foreach(var item in Model)
+                                    @foreach (var item in Model)
                                     {
                                         <tr>
                                             <td>
@@ -168,16 +169,19 @@
                                                 </div>
                                             </td>
                                             <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Admin/Contact/GetContactDetail/@item.ContactId">@item.UserMail</a></td>
+                                            <td class="mailbox-name"><a href="/Admin/Contact/GetContactDetail/@item.MessageId">@item.Alıcı</a></td>
+                                          
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.Message.Substring(0,30)....
+                                                <b>@item.Subject</b> @item.MessageDescription
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@item.Status</td>
+                                            <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
                                         </tr>
                                     }
-                                    
-                                    
+
+
+
+
 
                                 </tbody>
                             </table>
@@ -220,3 +224,4 @@
 
 </body>
 </html>
+

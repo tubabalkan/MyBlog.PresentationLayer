@@ -9,5 +9,7 @@ namespace MyBlog.BusinessLayer.Abstract
 {
     public interface IMessageService:IGenericService<Message>
     {
+       
+        List<Message> GetListSendBox();
     }
 }

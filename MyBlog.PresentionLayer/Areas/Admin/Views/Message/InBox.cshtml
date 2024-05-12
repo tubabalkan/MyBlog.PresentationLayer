@@ -1,7 +1,7 @@
 ﻿@using MyBlog.EntityLayer.Concrete
-@model List<Contact>
+@model List<Message>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "InBox";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
 
@@ -168,16 +168,19 @@
                                                 </div>
                                             </td>
                                             <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Admin/Contact/GetContactDetail/@item.ContactId">@item.UserMail</a></td>
+                                            <td class="mailbox-name"><a href="/Admin/Contact/GetContactDetail/@item.MessageId">@item.Gonderen</a></td>
+                                            
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.Message.Substring(0,30)....
+                                                <b>@item.Subject</b> @item.MessageDescription
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@item.Status</td>
+                                            <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
                                         </tr>
                                     }
                                     
-                                    
+                                  
+
+
 
                                 </tbody>
                             </table>
