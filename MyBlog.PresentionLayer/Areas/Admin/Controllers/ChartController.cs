@@ -21,6 +21,5 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
             return View();
         }
         
-
     }
 }
