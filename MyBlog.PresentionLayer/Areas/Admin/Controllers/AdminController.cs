@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MyBlog.BusinessLayer.Abstract;
 using MyBlog.EntityLayer.Concrete;
 
 namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
@@ -9,10 +10,16 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
     {
        
         private readonly UserManager<AppUser> _userManager;
+        private readonly IWriterService _writerService;
+        private readonly IMessageService _messageService;
+        private readonly IArticleService _articleService;
 
-        public AdminController(UserManager<AppUser> userManager)
+        public AdminController(UserManager<AppUser> userManager, IWriterService writerService, IMessageService messageService, IArticleService articleService)
         {
             _userManager = userManager;
+            _writerService = writerService;
+            _messageService = messageService;
+            _articleService = articleService;
         }
 
         public IActionResult AdminList()

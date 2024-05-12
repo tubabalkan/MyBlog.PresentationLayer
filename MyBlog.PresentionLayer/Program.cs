@@ -55,6 +55,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseStatusCodePagesWithReExecute("/Admin/ErrorPage/Page404","?code={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
