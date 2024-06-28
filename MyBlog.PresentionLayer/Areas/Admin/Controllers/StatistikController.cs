@@ -45,7 +45,7 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
 
 
             var comments= _commentService.TGetListAll();
-            ViewBag.ilkyorumtarih = comments.First().CreateDate.ToString("dd/MM/yyyy");
+           ViewBag.ilkyorumtarih = comments.First().CreateDate.ToString("dd/MM/yyyy");
             ViewBag.sonyorumtarih = comments.Last().CreateDate.ToString("dd/MM/yyyy");
 
             var categories = _categoryService.TGetListAll();

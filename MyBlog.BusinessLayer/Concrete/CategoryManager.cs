@@ -1,5 +1,6 @@
 ﻿using MyBlog.BusinessLayer.Abstract;
 using MyBlog.DataAccessLayer.Abstract;
+using MyBlog.DataAccessLayer.EntityFramework;
 using MyBlog.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace MyBlog.BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-     
+      
 
         public void TDelete(int id)
         {
@@ -54,4 +55,5 @@ namespace MyBlog.BusinessLayer.Concrete
             _categoryDal.Update(entity);
         }
     }
+
 }
