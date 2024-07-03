@@ -52,7 +52,7 @@ namespace MyBlog.BusinessLayer.Concrete
 
         public void TUpdate(Category entity)
         {
-            _categoryDal.Update(entity);
+            throw new NotImplementedException();
         }
     }
 
