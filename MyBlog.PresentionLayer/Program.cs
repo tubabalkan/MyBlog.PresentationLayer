@@ -42,7 +42,7 @@ builder.Services.AddScoped<IContactDal, EfContactDal>();
 
 builder.Services.AddDbContext<BlogContext>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<BlogContext>().AddErrorDescriber<CustomIdenditityValidator>();
-
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
