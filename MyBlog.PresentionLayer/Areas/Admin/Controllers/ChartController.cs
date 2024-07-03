@@ -24,10 +24,10 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<CategoryClass> list = new List<CategoryClass>();
-            list.Add(new CategoryClass { categoryname = "Yiyecek içecek", categorycount = 1 });
-            list.Add(new CategoryClass { categoryname = "Bilim", categorycount = 1});
-            list.Add(new CategoryClass { categoryname = "Yazılım", categorycount = 1 });
-            list.Add(new CategoryClass { categoryname = "Spor", categorycount = 1 });
+            list.Add(new CategoryClass { categoryname = "Yiyecek içecek", categorycount = 4 });
+            list.Add(new CategoryClass { categoryname = "Bilim", categorycount = 5});
+            list.Add(new CategoryClass { categoryname = "Yazılım", categorycount = 6 });
+            list.Add(new CategoryClass { categoryname = "Spor", categorycount = 3 });
             list.Add(new CategoryClass { categoryname = "Kitap ve Edebiyat", categorycount = 1 });
             return Json(new { jsonList = list });
         }
