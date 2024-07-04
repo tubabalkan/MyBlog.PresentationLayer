@@ -24,6 +24,13 @@ namespace MyBlog.PresentationLayer.Areas.Admin.Controllers
         }
         public IActionResult DeleteYorum(int id)
         {
+            var comment = _commentService.TGetById(id);
+            if (comment != null)
+            {
+                comment.Status = false; // veya istediğiniz değere göre güncelleyin
+                _commentService.TUpdate(comment);
+            }
+
             return RedirectToAction("YorumList");
         }
         [HttpGet]
