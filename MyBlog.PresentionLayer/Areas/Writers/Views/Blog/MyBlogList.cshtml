@@ -48,7 +48,7 @@
                                                 </ul>
                                             </td>
                                             <td>@item.Category.CategoryName</td>
-                                            <td>@item.CreatedDate</td>
+                                            <td>@(((DateTime)item.CreatedDate).ToString("dd-MMM-yyy"))</td>
                                             <td><a href="/Writers/Blog/DeleteBlog/@item.ArticleId" class="btn btn-danger">Sil</a></td>
                                             <td><a href="/Writers/Blog/UpdateBlog/@item.ArticleId" class="btn btn-success">Güncelle</a></td>
                                         </tr>
