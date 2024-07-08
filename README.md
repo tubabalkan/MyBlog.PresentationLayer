@@ -1,9 +1,9 @@
 # MyBlog
 M&Y Yazılım bünyesinde Murat Yücedağ Hocamızla birlikte geliştirdiğim İdentity Kütüphanesi kullanarak geliştirdiğim 3. projem. Admin, Kullanıcı ve yazar paneli içermektedir.
 # Projeye Genel Bakış 
-👩‍💻 Admin Paneli: Admin İstatistikleri, Yazarları, Blogları, Mesajları ve Yorumları görebilir aynı zamanda bunları yönetebilir.
-👩‍💻 Yazar Arayüzü: Yazar bilgilerini güncelleyebilir, blog ekleyip düzenleyebilir, etiketleri görebilir, kendisine gelen mesajları görebilir.
-👩 Kullanıcı Arayüzü: Kullanıcılar sayfada blogları, kategorileri ve blogların detaylarını görebiliyor.
+👩‍💻 Admin Paneli: Admin İstatistikleri, Yazarları, Blogları, Mesajları ve Yorumları görebilir aynı zamanda bunları yönetebilir. </br>
+👩‍💻 Yazar Arayüzü: Yazar bilgilerini güncelleyebilir, blog ekleyip düzenleyebilir, etiketleri görebilir, kendisine gelen mesajları görebilir. </br>
+👩 Kullanıcı Arayüzü: Kullanıcılar sayfada blogları, kategorileri ve blogların detaylarını görebiliyor. </br>
  
 # 📌 Kullanılan Teknolojiler r
 ✔ .NET Core 6.0</br>
