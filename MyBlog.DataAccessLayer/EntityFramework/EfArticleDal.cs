@@ -38,5 +38,14 @@ namespace MyBlog.DataAccessLayer.EntityFramework
             var values = context.Articles.Where(x => x.ArticleId == id).Include(y => y.Category).FirstOrDefault();
             return values;
         }
+
+        public AppUser GetArticleWithUserArticleId(int id)
+        {
+            var value = context.Articles
+                     .Include(a => a.AppUser) // ilişkili AppUser nesnesini yükle
+                     .FirstOrDefault(x => x.ArticleId == id);
+
+            return value?.AppUser;
+        }
     }
 }

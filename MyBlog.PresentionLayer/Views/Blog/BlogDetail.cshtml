@@ -32,7 +32,7 @@
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="./index.html"><img src="img/humberger/humberger-logo.png" alt=""></a>
+            <a href="./index.html"><img src="~/foodeiblog-master/img/humberger/humberger-logo.png" alt=""></a>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
@@ -60,7 +60,7 @@
             <div class="humberger__menu__title sidebar__item__title">
                 <h6>About me</h6>
             </div>
-            <img src="img/humberger/humberger-about.jpg" alt="">
+            <img src="~/foodeiblog-master/img/humberger/humberger-about.jpg" alt="">
             <h6>Hi every one! I,m Lena Mollein.</h6>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -190,7 +190,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="~/foodeiblog-master/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-md-2">
@@ -206,7 +206,7 @@
         </div>
     </header>
     <section class="single-post spad">
-        <div class="single-post__hero set-bg" data-setbg="/foodeiblog-master/img/categories/single-post/single-post-hero.jpg"></div>
+        <div class="single-post__hero set-bg" data-setbg="@ViewBag.gorsel" style="width: 100%; height: 1000px;"></div>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
@@ -242,53 +242,17 @@
                         </p>
                     </div>
                    
-                    
-                    <div class="single-post__tags">
-                        <a href="#">Food</a>
-                        <a href="#">Vegan</a>
-                        <a href="#">Tomato</a>
-                        <a href="#">Weightloss</a>
-                    </div>
-                    <div class="single-post__next__previous">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <a href="#" class="single-post__previous">
-                                    <h6><span class="arrow_carrot-left"></span> Previous posts</h6>
-                                    <div class="single-post__previous__meta">
-                                        <h4>08</h4>
-                                        <span>Aug</span>
-                                    </div>
-                                    <div class="single-post__previous__text">
-                                        <span>Dinner</span>
-                                        <h5>The Best Weeknight Baked <br />Potatoes, 3 Creative Ways</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <a href="#" class="single-post__next">
-                                    <h6>Next posts <span class="arrow_carrot-right"></span> </h6>
-                                    <div class="single-post__next__meta">
-                                        <h4>05</h4>
-                                        <span>Aug</span>
-                                    </div>
-                                    <div class="single-post__next__text">
-                                        <span>Smoothie</span>
-                                        <h5>The $8 French Rosé I Buy in <br />Bulk Every Summer</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="single-post__author__profile">
                         <div class="single-post__author__profile__pic">
-                            <img src="img/categories/single-post/author-profile.jpg" alt="">
+                            <img src="~/foodeiblog-master/img/p67hvz1.jpg" alt="">
                         </div>
                         <div class="single-post__author__profile__text">
-                            <h4>Lena Mollein.</h4>
+                            <h4>@ViewBag.name</h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Her satırda, her kelime arasında kendimi bulduğum bir dünya var: blog yazmak.
+                                Bilgisayarımın başına oturduğumda, klavyenin tuşlarına dokunmakla birlikte düşüncelerim de klavyeden akıyor.
+                                Sözcüklerim, duygularımı,
+                                deneyimlerimi ve bilgilerimi dünyayla paylaşma yolculuğumda bana eşlik ediyor.
                             </p>
                             <div class="single-post__author__profile__social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -302,16 +266,16 @@
                     @await Component.InvokeAsync("_commentListMyBlogPartial")
                     <div class="single-post__leave__comment">
                         <div class="widget__title">
-                            <h4>Leave a comment</h4>
+                            <h4>Yorum Yap</h4>
                         </div>
                         <form action="#">
                             <div class="input-list">
                                 <input type="text" placeholder="Name">
-                                <input type="text" placeholder="Email">
-                                <input type="text" placeholder="Website">
+                                <input type="text" placeholder="Mail Adresi">
+                                <input type="text" placeholder="Phone">
                             </div>
-                            <textarea placeholder="Message"></textarea>
-                            <button type="submit" class="site-btn">Submit</button>
+                            <textarea placeholder="Mesaj"></textarea>
+                            <button type="submit" class="site-btn">Gönder</button>
                         </form>
                     </div>
                 </div>
@@ -325,7 +289,7 @@
             <div class="footer__instagram">
                 <div class="footer__instagram__avatar">
                     <div class="footer__instagram__avatar--pic">
-                        <img src="img/footer/instagram-avatar.jpg" alt="">
+                        <img src="~/foodeiblog-master/img/footer/instagram-avatar.jpg" alt="">
                     </div>
                     <div class="footer__instagram__avatar--text">
                         <h5> foodieblog</h5>
@@ -359,7 +323,7 @@
                 <div class="col-lg-12">
                     <div class="footer__text">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/logo.png" alt=""></a>
+                            <a href="#"><img src="~/foodeiblog-master/img/logo.png" alt=""></a>
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt

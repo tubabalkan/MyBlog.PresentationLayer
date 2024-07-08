@@ -40,9 +40,16 @@ namespace MyBlog.BusinessLayer.Concrete
             return _articleDal.GetArticlesWithCategoryByWriter(id) ;
         }
 
+     
+
         public Article TGetArticleWithCategoryArticleId(int id)
         {
             return _articleDal.GetArticleWithCategoryArticleId(id) ;
+        }
+
+        public AppUser TGetArticleWithUserArticleId(int id)
+        {
+            return _articleDal.GetArticleWithUserArticleId(id) ;
         }
 
         public Article TGetById(int id)
