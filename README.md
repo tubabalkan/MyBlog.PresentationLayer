@@ -5,7 +5,7 @@ M&Y Yazılım bünyesinde Murat Yücedağ Hocamızla birlikte geliştirdiğim İ
 👩‍💻 Yazar Arayüzü: Yazar bilgilerini güncelleyebilir, blog ekleyip düzenleyebilir, etiketleri görebilir, kendisine gelen mesajları görebilir. </br>
 👩 Kullanıcı Arayüzü: Kullanıcılar sayfada blogları, kategorileri ve blogların detaylarını görebiliyor. </br>
  
-# 📌 Kullanılan Teknolojiler r
+# 📌 Kullanılan Teknolojiler 
 ✔ .NET Core 6.0</br>
 ✔ Entity Framework (ORM) 6.0 </br>
 ✔ N-Architecture ve Repository tasarım deseni </br>
