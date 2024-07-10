@@ -15,6 +15,7 @@ M&Y Yazılım bünyesinde Murat Yücedağ Hocamızla birlikte geliştirdiğim İ
 ✔Fluent Validation - </br>
 ✔ Identity -(NET Core tabanlı web uygulamalarında kullanıcı kimlik doğrulama ve yetkilendirme işlemlerini sağlayan bir çerçevedir) </br>
 ✔ HTML-CSS-Bootstrap </br>
+✔ Api ile hava durumu bilgisi
 
 # 📌Proje İçi Görseller
 ## 👩‍💻 Admin
