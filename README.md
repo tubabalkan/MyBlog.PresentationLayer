@@ -6,16 +6,18 @@ M&Y Yazılım bünyesinde Murat Yücedağ Hocamızla birlikte geliştirdiğim İ
 👩 Kullanıcı Arayüzü: Kullanıcılar sayfada blogları, kategorileri ve blogların detaylarını görebiliyor. </br>
  
 # 📌 Kullanılan Teknolojiler 
-✔ .NET Core 6.0</br>
+✔ C#, ASP.NET Core(Dil ve Framework)</br>
 ✔ Entity Framework (ORM) 6.0 </br>
-✔ N-Architecture ve Repository tasarım deseni </br>
-✔Rapid Api ile Hava Durumu Bilgisi
 ✔ Code First  </br>
-✔ Microsoft SQL Server (MSSQL)  </br>
-✔Fluent Validation - </br>
-✔ Identity -(NET Core tabanlı web uygulamalarında kullanıcı kimlik doğrulama ve yetkilendirme işlemlerini sağlayan bir çerçevedir) </br>
+✔ Microsoft SQL Server(MSSQL) (Veritabanı) </br>
+✔ N-Architecture  </br>
+✔ Repository Design Pattern(CRUD işlemlerinde kod tekrarını önlemek ve daha esnek bir yapı sağlamak için.)</br>
+✔ Dependency Injection (Bağımlılıkların yönetimi ve bağımsız bir kod yapısı oluşturmak için.) </br>
+✔ ASP.NET Identity(Kimlik Doğrulama) </br>
 ✔ HTML-CSS-Bootstrap </br>
-✔ Api ile hava durumu bilgisi
+✔ Rapid API </br>
+✔ Mapping(AutoMapper ile DTO ve Entity dönüşümleri.) </br>
+✔ Validation (FluentValidation ile veri doğrulama süreçleri.) </br>
 
 # 📌Proje İçi Görseller
 ## 👩‍💻 Admin
